@@ -3,12 +3,12 @@ import java.util.*;
 public class Start {
 
     public static void main(String[] args) throws Exception {
-        int userInput;        
+        int userInput;
 
         boolean flag = true;
 
         Scanner input = new Scanner(System.in);
-        
+
         ArrayList<Data> info = new ArrayList<Data>();
 
         while(flag) {
@@ -21,9 +21,8 @@ public class Start {
             System.out.println("3 : Exit the database");
             System.out.println("--------------------------------------");
             try {
-                
-                userInput = input.nextInt(); 
-                
+
+                userInput = input.nextInt();
                 switch(userInput) {
                     case 0:
                         InsertData.addData(info);
@@ -44,12 +43,11 @@ public class Start {
                         break;
                 }
             } catch(Exception e) {
-                
-                System.out.println( e + "Invalid input!");
+
+                System.out.println( "Invalid input!");
                 System.out.println("Input must be a number.");
-            }
+                System.exit(1);
+           }
         }
-
     }
-
 }
